@@ -18,7 +18,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Ji-Yuhang/a.vim'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'matchit.zip'
-Plugin 'taglist.vim'
+Plugin 'Tagbar'
 Plugin 'L9'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
@@ -45,21 +45,3 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "
-
-
-set shortmess=atI
-set nu
-syntax on
-set showcmd
-set laststatus=2
-set foldenable
-colorscheme desert
-set guifont=Consolas:h11
-set encoding=utf-8
-set fencs=utf-8
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
-set fileencoding=utf-8
-language messages zh_CN.utf-8
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
-
