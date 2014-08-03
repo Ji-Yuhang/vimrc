@@ -20,6 +20,9 @@ Plugin 'Ji-Yuhang/a.vim'
 Plugin 'matchit.zip'
 Plugin 'Tagbar'
 Plugin 'L9'
+Plugin 'The-NERD-Commenter'
+Plugin 'The-NERD-tree'
+Plugin 'OmniCppComplete'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)

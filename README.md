@@ -14,3 +14,10 @@ source ~/vimrc/bundlerc.vim
 source ~/vimrc/vimrc.vim
 
 ```
+
+### ctags
+
+```
+ctags -R --c++-kinds=+px --fields=+iaS --extra=+q 
+```
+
