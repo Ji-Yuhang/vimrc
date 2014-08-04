@@ -14,6 +14,11 @@ set autoread            " 当文件被改动，自动加载
 set nobackup            " 从不备份 
 set noswapfile          " 禁止生成临时文件 
 set ruler               "突出显示状态栏标尺 
+set cc=80
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+set cursorline
+set hlsearch
+set incsearch
 
 " begin 设置中文不乱码 
 set encoding=utf-8
