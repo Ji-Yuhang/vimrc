@@ -42,3 +42,4 @@ set smarttab
 
 " 键盘映射 
 nmap <A-m> :TagbarToggle<CR>
+nmap <A-O> :NERDTreeToggle<CR>
