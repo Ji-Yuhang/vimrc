@@ -7,7 +7,7 @@ set foldenable		" 允许折叠
 set foldmethod=manual	" 手动折叠
 colorscheme desert		" 配色 
 set background=dark		" 黑色背景 
-set guifont=Consolas:h11	" 设置字体 
+set guifont=Consolas\ 13	" 设置字体 
 set guioptions-=T       " 隐藏工具栏 
 set guioptions-=m       " 隐藏菜单栏 
 set autoread            " 当文件被改动，自动加载 
@@ -43,3 +43,18 @@ set smarttab
 " 键盘映射 
 nmap <A-m> :TagbarToggle<CR>
 nmap <A-O> :NERDTreeToggle<CR>
+
+set path+=/usr/include/qt4
+set path+=/usr/include/qt4/Qt
+set path+=/usr/include/qt4/QtCore
+set path+=/usr/include/qt4/QtGui
+set path+=/usr/include/qt4/QtNetwork
+set path+=/usr/include/qt4/QtSql
+set path+=/usr/include/qt4/QtXml
+set path+=/usr/include/c++/4.8
+set path+=/usr/include
+
+set completeopt-=preview
+let g:clang_complete_copen=1
+let g:clang_periodic_quickfix=1
+let g:clang_snippets=1

@@ -3,7 +3,9 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/vimfiles/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 let path='~/vimfiles/bundle'
+let path='~/.vim/bundle'
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -22,7 +24,9 @@ Plugin 'Tagbar'
 Plugin 'L9'
 Plugin 'The-NERD-Commenter'
 Plugin 'The-NERD-tree'
-Plugin 'OmniCppComplete'
+"Plugin 'OmniCppComplete'
+Plugin 'JSON.vim'
+Plugin 'clang-complete'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
