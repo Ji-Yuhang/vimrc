@@ -7,6 +7,10 @@ set foldenable		" 允许折叠
 set foldmethod=manual	" 手动折叠
 set background=dark		" 黑色背景 
 colorscheme desert		" 配色 
+
+set noeb "出错时没有bi的报警声音
+set vb "出错时候闪烁提示
+ 
 if has("gui_running")
     set background=light		" 黑色背景 
     colorscheme solarized
@@ -64,15 +68,24 @@ if has("unix")
     set path+=/usr/include
 endif
 if has("mac")
-    set path+=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1
-    set path+=/usr/include
-    set path+=/opt/local/include
+    set path+=.
+    set path+=../bin/.moc
+    set path+=../bin/.qrc
+    set path+=../bin/.ui
+    set path+=./soap
+
     set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include
     set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtCore
     set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtGui
     set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtWidgets
     set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtNetwork
+    set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtXml
+    set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtSql
 
+    set path+=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1
+    set path+=/usr/include
+    set path+=/opt/local/include
+ 
     "set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/lib/QtCore.framework
     "set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/lib/QtGui.framework
     "set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/lib/QtNetwork.framework
@@ -80,10 +93,6 @@ if has("mac")
     "set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/lib/QtGui.framework/Versions/5/Headers
     "set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/lib/QtWidgets.framework/Versions/5/Headers
     "set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/lib/QtNetwork.framework/Versions/5/Headers
-    set path+=.
-    set path+=../bin/.moc
-    set path+=../bin/.qrc
-    set path+=../bin/.ui
 endif
 
 set completeopt-=preview
