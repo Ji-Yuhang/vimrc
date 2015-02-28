@@ -53,8 +53,13 @@ set smarttab
 " 
 
 " 键盘映射 
-nmap <A-m> :TagbarToggle<CR>
-nmap <A-O> :NERDTreeToggle<CR>
+if has("mac")
+    nnoremap µ :TagbarToggle<CR>
+    nnoremap Ø :NERDTreeToggle<CR>
+else
+    nmap <A-m> :TagbarToggle<CR>
+    nmap <A-O> :NERDTreeToggle<CR>
+endif
 
 if has("unix")
     set path+=/usr/include/qt4
