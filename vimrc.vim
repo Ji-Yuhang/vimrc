@@ -8,8 +8,9 @@ set foldmethod=manual	" 手动折叠
 colorscheme desert		" 配色 
 set background=dark		" 黑色背景 
 set guifont=Consolas:h11	" 设置字体 
+set guifont=Monaco:h11:cANSI
 set guioptions-=T       " 隐藏工具栏 
-set guioptions-=m       " 隐藏菜单栏 
+"set guioptions-=m       " 隐藏菜单栏 
 set autoread            " 当文件被改动，自动加载 
 set nobackup            " 从不备份 
 set noswapfile          " 禁止生成临时文件 
@@ -42,3 +43,6 @@ set smarttab
 
 " 键盘映射 
 nmap <A-m> :TagbarToggle<CR>
+nmap <A-o> :A<CR>
+nmap <A-O> :NERDTreeToggle<CR>
+
