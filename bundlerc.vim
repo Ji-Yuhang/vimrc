@@ -3,7 +3,9 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/vimfiles/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 let path='~/vimfiles/bundle'
+let path='~/.vim/bundle'
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -16,19 +18,31 @@ Plugin 'gmarik/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 Plugin 'Ji-Yuhang/a.vim'
+Plugin 'Mizuchi/STL-Syntax'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'matchit.zip'
 Plugin 'Tagbar'
 Plugin 'L9'
 Plugin 'The-NERD-Commenter'
 Plugin 'The-NERD-tree'
-Plugin 'OmniCppComplete'
 Plugin 'echofunc.vim'
-Plugin 'cpp.vim'
 Plugin 'qthelp'
 Plugin 'calendar.vim'
-
-
+Plugin 'rails.vim'
+Plugin 'railscasts'
+Plugin 'ctrlp.vim'
+"Plugin 'OmniCppComplete'
+Plugin 'JSON.vim'
+Plugin 'clang-complete'
+Plugin 'Solarized'
+Plugin 'qmake--syntax.vim'
+Plugin 'cpp.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'MarkdownFootnotes'
+"Plugin 'instant-markdown.vim'
+Plugin 'rizzatti/dash.vim'
+" Plugin 'STL-improved'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
