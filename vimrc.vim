@@ -6,6 +6,21 @@ set laststatus=2	" 总是显示状态栏
 set foldenable		" 允许折叠 
 set foldmethod=manual	" 手动折叠
 set background=dark		" 黑色背景 
+
+set spell
+function! Dict()
+    let l:wincol=wincol()
+    let l:winline=winline()
+    let l:x=getwinposx()
+    let l:y=getwinposy()
+    "echo l:x." ".l:y
+    let l:abc=expand("<cword>")
+    let l:com="ruby C:\\Users\\jiyuhang\\vimrc\\dict.rb ".l:abc
+    echo l:com
+    call system(l:com)
+endfunction
+
+
 if has("win32")
     set guifont=Consolas:h11	" 设置字体 
     set guifont=Monaco:h11:cANSI
@@ -62,6 +77,7 @@ if has("win32")
     nmap <A-m> :TagbarToggle<CR>
     nmap <A-o> :A<CR>
     nmap <A-O> :NERDTreeToggle<CR>
+    nmap <A-d> :call Dict()<CR>
 endif
 if has("mac")
     nnoremap µ :TagbarToggle<CR>
