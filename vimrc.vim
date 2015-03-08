@@ -15,9 +15,17 @@ function! Dict()
     let l:y=getwinposy()
     "echo l:x." ".l:y
     let l:abc=expand("<cword>")
-    let l:com="ruby C:\\Users\\jiyuhang\\vimrc\\dict.rb ".l:abc
-    echo l:com
-    call system(l:com)
+    if has("win32")
+        let l:com="ruby C:\\Users\\jiyuhang\\vimrc\\dict.rb ".l:abc
+        call system(l:com)
+        echo l:com
+    endif
+    if has("mac")
+        let l:com="ruby ~/vimrc/shanbay.rb ".l:abc
+        let l:shanbay=system(l:com)
+        echo l:shanbay
+    endif
+    
 endfunction
 
 
@@ -82,9 +90,11 @@ endif
 if has("mac")
     nnoremap µ :TagbarToggle<CR>
     nnoremap Ø :NERDTreeToggle<CR>
+    nmap ∂ :call Dict()<CR>
 else
     nmap <A-m> :TagbarToggle<CR>
     nmap <A-O> :NERDTreeToggle<CR>
+    nmap <A-d> :call Dict()<CR>
 endif
 
 if has("unix")
