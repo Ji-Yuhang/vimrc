@@ -25,7 +25,18 @@ function! Dict()
         let l:shanbay=system(l:com)
         echo l:shanbay
     endif
-    
+endfunction
+
+function! Shanbay()
+     let l:wincol=wincol()
+    let l:winline=winline()
+    let l:x=getwinposx()
+    let l:y=getwinposy()
+    "echo l:x." ".l:y
+    let l:abc=expand("<cword>")
+    let l:com="ruby C:\\Users\\jiyuhang\\vimrc\\shanbay.rb ".l:abc
+    let l:shanbay=system(l:com)
+    echo l:shanbay
 endfunction
 
 
@@ -86,15 +97,18 @@ if has("win32")
     nmap <A-o> :A<CR>
     nmap <A-O> :NERDTreeToggle<CR>
     nmap <A-d> :call Dict()<CR>
+    nmap <A-D> :call Shanbay()<CR>
 endif
 if has("mac")
     nnoremap µ :TagbarToggle<CR>
     nnoremap Ø :NERDTreeToggle<CR>
     nmap ∂ :call Dict()<CR>
+    nmap <A-D> :call Shanbay()<CR>
 else
     nmap <A-m> :TagbarToggle<CR>
     nmap <A-O> :NERDTreeToggle<CR>
     nmap <A-d> :call Dict()<CR>
+    nmap <A-D> :call Shanbay()<CR>
 endif
 
 if has("unix")
