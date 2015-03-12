@@ -35,6 +35,9 @@ function! Shanbay()
     "echo l:x." ".l:y
     let l:abc=expand("<cword>")
     let l:com="ruby C:\\Users\\jiyuhang\\vimrc\\shanbay.rb ".l:abc
+    if has("mac")
+        let l:com="ruby ~/vimrc/shanbay.rb ".l:abc
+    endif
     let l:shanbay=system(l:com)
     echo l:shanbay
 endfunction
@@ -104,6 +107,8 @@ if has("mac")
     nnoremap Ø :NERDTreeToggle<CR>
     nmap ∂ :call Dict()<CR>
     nmap <A-D> :call Shanbay()<CR>
+    nmap Î :call Shanbay()<CR>
+    
 else
     nmap <A-m> :TagbarToggle<CR>
     nmap <A-O> :NERDTreeToggle<CR>
