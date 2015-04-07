@@ -16,7 +16,7 @@ function! Dict()
     "echo l:x." ".l:y
     let l:abc=expand("<cword>")
     if has("win32")
-        let l:com="ruby C:\\Users\\jiyuhang\\vimrc\\dict.rb ".l:abc
+        let l:com="ruby C:\\Users\\Administrator\\vimrc\\dict.rb ".l:abc
         call system(l:com)
         echo l:com
     endif
@@ -34,7 +34,7 @@ function! Shanbay()
     let l:y=getwinposy()
     "echo l:x." ".l:y
     let l:abc=expand("<cword>")
-    let l:com="ruby C:\\Users\\jiyuhang\\vimrc\\shanbay.rb ".l:abc
+    let l:com="ruby C:\\Users\\Administrator\\vimrc\\shanbay.rb ".l:abc
     if has("mac")
         let l:com="ruby ~/vimrc/shanbay.rb ".l:abc
     endif
@@ -45,7 +45,7 @@ endfunction
 
 if has("win32")
     set guifont=Consolas:h11	" 设置字体 
-    set guifont=Monaco:h11:cANSI
+    set guifont=Consolas:h11:cANSI
 endif
 colorscheme desert		" 配色 
 
@@ -62,8 +62,13 @@ endif
 if has("mac")
     set guifont=Monaco:h13
 endif
+
+if has("gui_runing") && has("win32")
+    map <F11> :call libcallnr("gvimfullscreen.dll", "ToggleFullScreen",0)<CR>
+endif
+
 set guioptions-=T       " 隐藏工具栏 
-"set guioptions-=m       " 隐藏菜单栏 
+set guioptions-=m       " 隐藏菜单栏 
 set autoread            " 当文件被改动，自动加载 
 set nobackup            " 从不备份 
 set noswapfile          " 禁止生成临时文件 
