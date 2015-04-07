@@ -5,6 +5,7 @@ set showcmd		    " 在Vim窗口的右下角显示一个完整的命令已经完�
 set laststatus=2	" 总是显示状态栏
 set foldenable		" 允许折叠 
 set foldmethod=manual	" 手动折叠
+set nofoldenable
 set background=dark		" 黑色背景 
 
 set spell
@@ -76,6 +77,7 @@ set ruler               "突出显示状态栏标尺
 set cc=80
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%y/%m/%d\ -\ %H:%M\")}
 set cursorline
+set cursorcolumn
 set hlsearch
 set incsearch
 
