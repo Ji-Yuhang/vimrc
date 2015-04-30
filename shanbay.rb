@@ -13,12 +13,19 @@ open( getwordui) do |io|
     cndef = data["cn_definition"]
     endef = data["en_definition"]
     word = data["content"]
-    puts word
+    pron = data["pron"]
+    printf word
+    if !pron.empty?
+        print  "\t [ " + pron + " ]"
+        print "\n"
+    end
 
     audio = data["us_audio"]
     
-    puts cndef["defn"]
     puts endef["defn"]
+    puts cndef["defn"]
+
+    system "mplayer " + audio + " >/dev/null 2>&1"
 
     localmdeid = "/Users/jiyuhang/Documents/Anki/用户1/collection.media/#{word}.mp3"
 #    pid = fork { exec 'wget',audio,'-o',localmdeid }
