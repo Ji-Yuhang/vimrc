@@ -17,7 +17,7 @@ function! Dict()
     "echo l:x." ".l:y
     let l:abc=expand("<cword>")
     if has("win32")
-        let l:com="ruby C:\\Users\\Administrator\\vimrc\\dict.rb ".l:abc
+        let l:com="ruby C:\\Users\\yuhang\\vimrc\\dict.rb ".l:abc
         call system(l:com)
         echo l:com
     endif

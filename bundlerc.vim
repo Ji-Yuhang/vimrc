@@ -43,7 +43,7 @@ Plugin 'gvimfullscreen_win32'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'MarkdownFootnotes'
-Plugin 'instant-markdown.vim'
+"Plugin 'instant-markdown.vim'
 Plugin 'rizzatti/dash.vim'
 " Plugin 'STL-improved'
 " Git plugin not hosted on GitHub
