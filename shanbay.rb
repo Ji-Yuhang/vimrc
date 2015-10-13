@@ -24,8 +24,10 @@ open( getwordui) do |io|
     
     puts endef["defn"]
     puts cndef["defn"]
+    #puts audio
 
-    system "mplayer " + audio + " >/dev/null 2>&1"
+    #system "mplayer " + audio + " >/dev/null 2>&1"
+    exec("mplayer " + audio + " >/dev/null 2>&1") if fork.nil?
 
     localmdeid = "/Users/jiyuhang/Documents/Anki/用户1/collection.media/#{word}.mp3"
 #    pid = fork { exec 'wget',audio,'-o',localmdeid }
