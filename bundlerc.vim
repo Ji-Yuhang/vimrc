@@ -47,6 +47,7 @@ Plugin 'MarkdownFootnotes'
 Plugin 'rizzatti/dash.vim'
 Plugin 'rainbow_parentheses.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'kristijanhusak/vim-hybrid-material'
 " Plugin 'STL-improved'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'

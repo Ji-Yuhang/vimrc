@@ -5,7 +5,7 @@ set showcmd		    " 在Vim窗口的右下角显示一个完整的命令已经完�
 set laststatus=2	" 总是显示状态栏
 set foldenable		" 允许折叠 
 set foldmethod=manual	" 手动折叠
-set nofoldenable
+"set nofoldenable
 set background=dark		" 黑色背景 
 
 set spell
@@ -50,6 +50,7 @@ if has("win32")
     set guifont=Microsoft_YaHei_Mono:h11
 endif
 colorscheme desert		" 配色 
+let g:enable_bold_font=1
 
 set noeb "出错时没有bi的报警声音
 set vb "出错时候闪烁提示
@@ -57,6 +58,7 @@ set vb "出错时候闪烁提示
 if has("gui_running")
     set background=light		" 黑色背景 
     colorscheme solarized
+    colorscheme hybrid_material
     let g:rbpt_colorpairs = [
                 \ ['brown',       'RoyalBlue3'],
                 \ ['Darkblue',    'SeaGreen3'],
@@ -96,8 +98,8 @@ if has("gui_runing") && has("win32")
     map <F11> :call libcallnr("gvimfullscreen.dll", "ToggleFullScreen",0)<CR>
 endif
 
-set guioptions-=T       " 隐藏工具栏 
-set guioptions-=m       " 隐藏菜单栏 
+ set guioptions-=T       " 隐藏工具栏 
+ set guioptions-=m       " 隐藏菜单栏 
 set autoread            " 当文件被改动，自动加载 
 set nobackup            " 从不备份 
 set noswapfile          " 禁止生成临时文件 
