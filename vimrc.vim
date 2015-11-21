@@ -47,6 +47,7 @@ endfunction
 if has("win32")
     set guifont=Consolas:h11	" 设置字体 
     set guifont=Consolas:h11:cANSI
+    set guifont=Microsoft_YaHei_Mono:h11
 endif
 colorscheme desert		" 配色 
 
