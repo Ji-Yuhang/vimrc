@@ -8,7 +8,7 @@ set foldmethod=manual	" 手动折叠
 "set nofoldenable
 set background=dark		" 黑色背景 
 
-set spell
+"set spell
 function! Dict()
     let l:wincol=wincol()
     let l:winline=winline()
@@ -124,9 +124,9 @@ source $VIMRUNTIME/menu.vim
 " 缩进 
 set autoindent
 set cindent
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set smarttab
 " 
