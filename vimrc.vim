@@ -42,6 +42,23 @@ function! Shanbay()
     let l:shanbay=system(l:com)
     echo l:shanbay
 endfunction
+function! Collins()
+     let l:wincol=wincol()
+    let l:winline=winline()
+    let l:x=getwinposx()
+    let l:y=getwinposy()
+    "echo l:x." ".l:y
+    let l:abc=expand("<cword>")
+    let l:com="ruby C:\\Users\\Administrator\\vimrc\\shanbay.rb ".l:abc
+    if has("mac")
+        let l:com="ruby ~/vimrc/collins.rb ".l:abc
+    endif
+    let l:shanbay=system(l:com)
+    echo l:shanbay
+endfunction
+
+
+
 
 
 if has("win32")
@@ -145,12 +162,16 @@ if has("mac")
     nmap ∂ :call Dict()<CR>
     nmap <A-D> :call Shanbay()<CR>
     nmap Î :call Shanbay()<CR>
+    nmap ç :call Collins()<CR>
+    nmap Ç :call Collins()<CR>
     
 else
     nmap <A-m> :TagbarToggle<CR>
     nmap <A-O> :NERDTreeToggle<CR>
     nmap <A-d> :call Dict()<CR>
     nmap <A-D> :call Shanbay()<CR>
+    nmap <A-C> :call Collins()<CR>
+    nmap <A-c> :call Collins()<CR>
 endif
 
 if has("unix")

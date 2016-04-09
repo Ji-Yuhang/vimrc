@@ -16,6 +16,13 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+
+" # ruby
+Plugin 'ruby.vimindentruby'
+Plugin 'indentruby.vim'
+Plugin 'Ruby-Snippets.vim'
+" # end
+
 Plugin 'tpope/vim-fugitive'
 Plugin 'Ji-Yuhang/a.vim'
 Plugin 'Mizuchi/STL-Syntax'
