@@ -75,7 +75,7 @@ set vb "出错时候闪烁提示
 if has("gui_running")
     set background=light		" 黑色背景 
     colorscheme solarized
-    colorscheme hybrid_material
+    "colorscheme hybrid_material
     let g:rbpt_colorpairs = [
                 \ ['brown',       'RoyalBlue3'],
                 \ ['Darkblue',    'SeaGreen3'],
@@ -217,3 +217,11 @@ endif
 "let g:clang_complete_copen=1
 "let g:clang_periodic_quickfix=1
 "let g:clang_snippets=1
+if has("mac")
+    let g:ctrlp_user_command = 'gfind %s -type f'
+    " Sane Ignore For ctrlp
+endif
+let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+      \ 'file': '\.exe$\|\.so$\|\.dat$'
+      \ }

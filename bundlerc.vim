@@ -18,9 +18,9 @@ Plugin 'gmarik/Vundle.vim'
 " plugin on GitHub repo
 
 " # ruby
-Plugin 'ruby.vimindentruby'
+"Plugin 'ruby.vimindentruby'
 Plugin 'indentruby.vim'
-Plugin 'Ruby-Snippets.vim'
+Plugin 'Ruby-Snippets'
 " # end
 
 Plugin 'tpope/vim-fugitive'
@@ -55,6 +55,10 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'rainbow_parentheses.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'kristijanhusak/vim-hybrid-material'
+Plugin 'SuperTab'
+Plugin 'word_complete.vim'
+Plugin 'Ji-Yuhang/ctrlp-rails.vim'
+
 " Plugin 'STL-improved'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'

@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require "open-uri"
 require "json"
-require "iconv"
+#require "iconv"
 require_relative "shanbay_local"
 
 module ShanbayHttp
@@ -58,7 +58,7 @@ def main
     word = argu.chomp
     #data = ShanbayDB::local_data word
     data = nil
-    data = ShanbayHttp::local_http_data word if data.nil?
+    data = ShanbayHttp::http_data word if data.nil?
     parse_shanbay_data data
 end
 

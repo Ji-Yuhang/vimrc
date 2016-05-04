@@ -46,7 +46,7 @@ def main
     argu = ARGV[0]
     word = argu.chomp
     CollinsHttp.local_http_data word
-    #parse_shanbay_data data
+    parse_shanbay_data data
 end
 
 main
