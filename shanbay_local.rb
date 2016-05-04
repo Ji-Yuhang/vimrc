@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
-gem 'bigdecimal', '1.2.4'
+#gem 'bigdecimal', '1.2.4'
 require 'active_record'
 require 'sqlite3'
-require 'awesome_print'
+#require 'awesome_print'
 require 'socket'
 require 'json'
 
