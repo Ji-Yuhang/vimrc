@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 require "open-uri"
 require "json"
-require "iconv"
 require_relative "shanbay_local"
 
 module ShanbayHttp

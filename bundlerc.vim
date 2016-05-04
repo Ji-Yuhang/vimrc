@@ -23,6 +23,8 @@ Plugin 'indentruby.vim'
 Plugin 'Ruby-Snippets.vim'
 " # end
 
+
+Plugin 'rcyrus/snipmate-snippets-rubymotion'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Ji-Yuhang/a.vim'
 Plugin 'Mizuchi/STL-Syntax'
