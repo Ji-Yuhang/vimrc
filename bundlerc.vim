@@ -60,8 +60,7 @@ Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'SuperTab'
 Plugin 'word_complete.vim'
 Plugin 'Ji-Yuhang/ctrlp-rails.vim'
-Plugin 'Conque-Shell'
-
+Plugin 'oplatek/Conque-Shell'
 " Plugin 'STL-improved'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
