@@ -1,32 +1,21 @@
 #!/usr/bin/env ruby
 require "open-uri"
 require "json"
-#require "iconv"
-require_relative "shanbay_local"
+require "iconv"
 
-module ShanbayHttp
-    def http_data(word)
-        getwordui = "https://api.shanbay.com/bdc/search/?word=#{word}"
-        open( getwordui) do |io|
-            jsonstr =  io.read
-            json = JSON.parse(jsonstr)
-            data = json["data"]
-            return data
-        end
-        return nil
-    end
+module CollinsHttp
     def local_http_data(word)
-        getwordui = "http://localhost/shanbayword/?word=#{word}"
+        getwordui = "http://localhost/collinscndefs/?word=#{word}"
         open( getwordui) do |io|
             jsonstr =  io.read
-            #Iconv.conv('gbk','utf-8',result)
-            json = JSON.parse(jsonstr)
+            puts jsonstr
+            #json = JSON.parse(jsonstr)
             #data = json["data"]
-            return json
+            return jsonstr
         end
         return nil
     end
-    module_function :http_data, :local_http_data
+    module_function :local_http_data
 end
 
 def parse_shanbay_data(data)
@@ -56,9 +45,7 @@ end
 def main
     argu = ARGV[0]
     word = argu.chomp
-    #data = ShanbayDB::local_data word
-    data = nil
-    data = ShanbayHttp::http_data word if data.nil?
+    CollinsHttp.local_http_data word
     parse_shanbay_data data
 end
 
