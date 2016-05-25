@@ -8,6 +8,7 @@ set foldmethod=manual	" 手动折叠
 "set nofoldenable
 set background=dark		" 黑色背景 
 
+set nospell
 "set spell
 function! Dict()
     let l:wincol=wincol()
@@ -64,12 +65,12 @@ endfunction
 if has("win32")
     set guifont=Consolas:h11	" 设置字体 
     set guifont=Consolas:h11:cANSI
-    set guifont=Microsoft_YaHei_Mono:h11
 endif
 colorscheme desert		" 配色 
 let g:enable_bold_font=1
 
 "set noeb "出错时没有bi的报警声音
+"set guifont=Microsoft_YaHei_Mono:h11
 set vb "出错时候闪烁提示
  
 if has("gui_running")
@@ -106,6 +107,7 @@ if has("gui_running")
 endif
 if has("unix")
     set guifont=Consolas\ 13	" 设置字体 
+    "set guifont=Microsoft_YaHei_Mono:h11
 endif
 if has("mac")
     set guifont=Monaco:h13
