@@ -34,18 +34,23 @@ def parse_shanbay_data(data)
     endef = data["en_definition"]
     word = data["content"]
     pron = data["pron"]
-    printf word
-    if !pron.empty?
+    if ARGV[1] == "only_english"
+      print  " [ " + pron + " ]"
+      puts endef["defn"]
+    else
+      printf word
+      if !pron.empty?
         print  "\t [ " + pron + " ]"
         print "\n"
-    end
+      end
 
-    puts cndef["defn"]
-    puts endef["defn"]
+      puts cndef["defn"]
+      puts endef["defn"]
+    end
 
     audio = data["us_audio"]
     #system "mplayer " + audio + " >/dev/null 2>&1"
-    exec("mplayer " + audio + " >/dev/null 2>&1") if fork.nil?
+    exec("mplayer " + audio + " >/dev/null 2>1") if fork.nil?
 
     #localmdeid = "/Users/jiyuhang/Documents/Anki/用户1/collection.media/#{word}.mp3"
     #    pid = fork { exec 'wget',audio,'-o',localmdeid }

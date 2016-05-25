@@ -29,6 +29,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Ji-Yuhang/a.vim'
 Plugin 'Mizuchi/STL-Syntax'
 " plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'snipMate'
 Plugin 'matchit.zip'
 Plugin 'Tagbar'
 Plugin 'L9'

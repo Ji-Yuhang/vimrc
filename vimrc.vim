@@ -69,7 +69,7 @@ endif
 colorscheme desert		" 配色 
 let g:enable_bold_font=1
 
-set noeb "出错时没有bi的报警声音
+"set noeb "出错时没有bi的报警声音
 set vb "出错时候闪烁提示
  
 if has("gui_running")
@@ -121,6 +121,7 @@ set autoread            " 当文件被改动，自动加载
 set nobackup            " 从不备份 
 set noswapfile          " 禁止生成临时文件 
 set ruler               "突出显示状态栏标尺 
+set list
 set cc=80
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%y/%m/%d\ -\ %H:%M\")}
 set cursorline
@@ -149,6 +150,14 @@ set smarttab
 " 
 
 " 键盘映射 
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" 标签设置
+map <S-Left> :tabp<CR>
+map <S-Right> :tabn<CR>
 if has("win32")
     nmap <A-m> :TagbarToggle<CR>
     nmap <A-o> :A<CR>
@@ -221,7 +230,16 @@ if has("mac")
     let g:ctrlp_user_command = 'gfind %s -type f'
     " Sane Ignore For ctrlp
 endif
+if exists("g:ctrlp_user_command")
+  unlet g:ctrlp_user_command
+endif
+set wildignore+=*\\vendor\\**
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:ctrlp_custom_ignore = {
       \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
-      \ 'file': '\.exe$\|\.so$\|\.dat$'
+      \ 'file': '\.exe$\|\.so$\|\.dat$',
+      \ 'link': 'some_bad_symbolic_links',
       \ }
