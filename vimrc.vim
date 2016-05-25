@@ -114,7 +114,7 @@ if has("mac")
 endif
 
 if has("gui_runing") && has("win32")
-    map <F11> :call libcallnr("gvimfullscreen.dll", "ToggleFullScreen",0)<CR>
+    noremap <F11> :call libcallnr("gvimfullscreen.dll", "ToggleFullScreen",0)<CR>
 endif
 
  set guioptions-=T       " 隐藏工具栏 
@@ -123,7 +123,7 @@ set autoread            " 当文件被改动，自动加载
 set nobackup            " 从不备份 
 set noswapfile          " 禁止生成临时文件 
 set ruler               "突出显示状态栏标尺 
-set list
+set nolist
 set cc=80
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%y/%m/%d\ -\ %H:%M\")}
 set cursorline
@@ -152,37 +152,38 @@ set smarttab
 " 
 
 " 键盘映射 
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+noremap <C-j> <C-W>j
+noremap <C-k> <C-W>k
+noremap <C-h> <C-W>h
+noremap <C-l> <C-W>l
+nnoremap <space> viw
 
 " 标签设置
 map <S-Left> :tabp<CR>
 map <S-Right> :tabn<CR>
 if has("win32")
-    nmap <A-m> :TagbarToggle<CR>
-    nmap <A-o> :A<CR>
-    nmap <A-O> :NERDTreeToggle<CR>
-    nmap <A-d> :call Dict()<CR>
-    nmap <A-D> :call Shanbay()<CR>
+    nnoremap <A-m> :TagbarToggle<CR>
+    nnoremap <A-o> :A<CR>
+    nnoremap <A-O> :NERDTreeToggle<CR>
+    nnoremap <A-d> :call Dict()<CR>
+    nnoremap <A-D> :call Shanbay()<CR>
 endif
 if has("mac")
     nnoremap µ :TagbarToggle<CR>
     nnoremap Ø :NERDTreeToggle<CR>
-    nmap ∂ :call Dict()<CR>
-    nmap <A-D> :call Shanbay()<CR>
-    nmap Î :call Shanbay()<CR>
-    nmap ç :call Collins()<CR>
-    nmap Ç :call Collins()<CR>
+    nnoremap ∂ :call Dict()<CR>
+    nnoremap <A-D> :call Shanbay()<CR>
+    nnoremap Î :call Shanbay()<CR>
+    nnoremap ç :call Collins()<CR>
+    nnoremap Ç :call Collins()<CR>
     
 else
-    nmap <A-m> :TagbarToggle<CR>
-    nmap <A-O> :NERDTreeToggle<CR>
-    nmap <A-d> :call Dict()<CR>
-    nmap <A-D> :call Shanbay()<CR>
-    nmap <A-C> :call Collins()<CR>
-    nmap <A-c> :call Collins()<CR>
+    nnoremap <A-m> :TagbarToggle<CR>
+    nnoremap <A-O> :NERDTreeToggle<CR>
+    nnoremap <A-d> :call Dict()<CR>
+    nnoremap <A-D> :call Shanbay()<CR>
+    nnoremap <A-C> :call Collins()<CR>
+    nnoremap <A-c> :call Collins()<CR>
 endif
 
 if has("unix")
@@ -240,8 +241,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-let g:ctrlp_custom_ignore = {
+"let g:ctrlp_custom_ignore = {
       \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
       \ 'file': '\.exe$\|\.so$\|\.dat$',
-      \ 'link': 'some_bad_symbolic_links',
+      \ 'link': 'some_bad_symbolic_links'
       \ }
+
