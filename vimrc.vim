@@ -106,8 +106,8 @@ if has("gui_running")
     au Syntax * RainbowParenthesesLoadBraces
 endif
 if has("unix")
-    set guifont=Consolas\ 13	" 设置字体 
-    "set guifont=Microsoft_YaHei_Mono:h11
+    "set guifont=Consolas:h13	" 设置字体 
+    set guifont=Microsoft_YaHei_Mono:h11
 endif
 if has("mac")
     set guifont=Monaco:h13
@@ -156,11 +156,29 @@ noremap <C-j> <C-W>j
 noremap <C-k> <C-W>k
 noremap <C-h> <C-W>h
 noremap <C-l> <C-W>l
-nnoremap <space> viw
+"nnoremap <space> viw
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+inoremap jk <esc>
+inoremap <esc> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+nnoremap <Left> <nop>
+nnoremap <Right> <nop>
+nnoremap <Up> <nop>
+nnoremap <Down> <nop>
 
+
+" 缩写, 加空格触发
+iabbrev Ji Ji-Yuhang
+iabbrev Ji-Yuhang- Ji-Yuhang
+iabbrev GM yuhang.silence@gmail.com
 " 标签设置
-map <S-Left> :tabp<CR>
-map <S-Right> :tabn<CR>
+noremap <S-Left> :tabp<CR>
+noremap <S-Right> :tabn<CR>
 if has("win32")
     nnoremap <A-m> :TagbarToggle<CR>
     nnoremap <A-o> :A<CR>
@@ -169,6 +187,11 @@ if has("win32")
     nnoremap <A-D> :call Shanbay()<CR>
 endif
 if has("mac")
+    inoremap ˙ <Left>
+    inoremap ¬ <Right>
+    inoremap ∆ <Down>
+    inoremap ˚ <Up>
+ 
     nnoremap µ :TagbarToggle<CR>
     nnoremap Ø :NERDTreeToggle<CR>
     nnoremap ∂ :call Dict()<CR>
@@ -178,6 +201,10 @@ if has("mac")
     nnoremap Ç :call Collins()<CR>
     
 else
+    inoremap <A-h> <Left>
+    inoremap <A-l> <Right>
+    inoremap <A-j> <Down>
+    inoremap <A-k> <Up>
     nnoremap <A-m> :TagbarToggle<CR>
     nnoremap <A-O> :NERDTreeToggle<CR>
     nnoremap <A-d> :call Dict()<CR>
