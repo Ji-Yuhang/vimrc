@@ -265,12 +265,15 @@ if exists("g:ctrlp_user_command")
 endif
 set wildignore+=*\\vendor\\**
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*/.idea/*
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+set wildignore+=tags
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tags'
 "let g:ctrlp_custom_ignore = {
       \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
       \ 'file': '\.exe$\|\.so$\|\.dat$',
       \ 'link': 'some_bad_symbolic_links'
       \ }
 
+let NERDTreeIgnore = ['tags$']
