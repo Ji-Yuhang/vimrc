@@ -66,7 +66,7 @@ if has("win32")
     set guifont=Consolas:h11	" 设置字体 
     set guifont=Consolas:h11:cANSI
 endif
-colorscheme desert		" 配色 
+colorscheme solarized		" 配色 
 let g:enable_bold_font=1
 
 "set noeb "出错时没有bi的报警声音
@@ -74,7 +74,8 @@ let g:enable_bold_font=1
 set vb "出错时候闪烁提示
  
 if has("gui_running")
-    set background=light		" 黑色背景 
+    set background=dark		" 黑色背景 
+    "let g:solarized_termcolors=256
     colorscheme solarized
     "colorscheme hybrid_material
     let g:rbpt_colorpairs = [
