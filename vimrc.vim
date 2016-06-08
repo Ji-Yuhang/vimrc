@@ -74,7 +74,7 @@ let g:enable_bold_font=1
 set vb "出错时候闪烁提示
  
 if has("gui_running")
-    set background=dark		" 黑色背景 
+    set background=light		" 黑色背景 
     "let g:solarized_termcolors=256
     colorscheme solarized
     "colorscheme hybrid_material
@@ -177,6 +177,7 @@ nnoremap <Down> <nop>
 iabbrev Ji Ji-Yuhang
 iabbrev Ji-Yuhang- Ji-Yuhang
 iabbrev GM yuhang.silence@gmail.com
+iabbrev slef self
 " 标签设置
 noremap <S-Left> :tabp<CR>
 noremap <S-Right> :tabn<CR>

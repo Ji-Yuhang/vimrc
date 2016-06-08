@@ -37,7 +37,7 @@ Plugin 'valloric/youcompleteme'
 Plugin 'reedes/vim-litecorrect'
 Plugin 'reedes/vim-wordy'
 Plugin 'junegunn/goyo.vim'
-
+Plugin 'slim-template/vim-slim'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'ack.vim'
 Plugin 'snipMate'
