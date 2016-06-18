@@ -16,10 +16,31 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+
+" # ruby
+"Plugin 'ruby.vimindentruby'
+Plugin 'indentruby.vim'
+Plugin 'Ruby-Snippets'
+" # end
+
+
+Plugin 'rcyrus/snipmate-snippets-rubymotion'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Ji-Yuhang/a.vim'
 Plugin 'Mizuchi/STL-Syntax'
+Plugin 'uguu-org/vim-matrix-screensaver'
+Plugin 'wincent/terminus'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'valloric/youcompleteme'
+Plugin 'reedes/vim-litecorrect'
+Plugin 'reedes/vim-wordy'
+Plugin 'junegunn/goyo.vim'
+Plugin 'slim-template/vim-slim'
 " plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'ack.vim'
+Plugin 'snipMate'
 Plugin 'matchit.zip'
 Plugin 'Tagbar'
 Plugin 'L9'
@@ -48,6 +69,10 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'rainbow_parentheses.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'kristijanhusak/vim-hybrid-material'
+Plugin 'SuperTab'
+Plugin 'word_complete.vim'
+Plugin 'Ji-Yuhang/ctrlp-rails.vim'
+Plugin 'oplatek/Conque-Shell'
 " Plugin 'STL-improved'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'

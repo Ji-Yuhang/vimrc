@@ -10,6 +10,7 @@ set background=dark		" 黑色背景
 
 "set spell
 "setlocal spell spelllang=en
+set nospell
 function! Dict()
     let l:wincol=wincol()
     let l:winline=winline()
@@ -43,23 +44,41 @@ function! Shanbay()
     let l:shanbay=system(l:com)
     echo l:shanbay
 endfunction
+function! Collins()
+     let l:wincol=wincol()
+    let l:winline=winline()
+    let l:x=getwinposx()
+    let l:y=getwinposy()
+    "echo l:x." ".l:y
+    let l:abc=expand("<cword>")
+    let l:com="ruby C:\\Users\\Administrator\\vimrc\\shanbay.rb ".l:abc
+    if has("mac")
+        let l:com="ruby ~/vimrc/collins.rb ".l:abc
+    endif
+    let l:shanbay=system(l:com)
+    echo l:shanbay
+endfunction
+
+
+
 
 
 if has("win32")
     set guifont=Consolas:h11	" 设置字体 
     set guifont=Consolas:h11:cANSI
-    set guifont=Microsoft_YaHei_Mono:h11
 endif
-colorscheme desert		" 配色 
+colorscheme solarized		" 配色 
 let g:enable_bold_font=1
 
-set noeb "出错时没有bi的报警声音
+"set noeb "出错时没有bi的报警声音
+"set guifont=Microsoft_YaHei_Mono:h11
 set vb "出错时候闪烁提示
  
 if has("gui_running")
     set background=light		" 黑色背景 
+    "let g:solarized_termcolors=256
     colorscheme solarized
-    colorscheme hybrid_material
+    "colorscheme hybrid_material
     let g:rbpt_colorpairs = [
                 \ ['brown',       'RoyalBlue3'],
                 \ ['Darkblue',    'SeaGreen3'],
@@ -89,14 +108,15 @@ if has("gui_running")
     au Syntax * RainbowParenthesesLoadBraces
 endif
 if has("unix")
-    set guifont=Consolas\ 13	" 设置字体 
+    "set guifont=Consolas:h13	" 设置字体 
+    set guifont=Microsoft_YaHei_Mono:h11
 endif
 if has("mac")
     set guifont=Monaco:h13
 endif
 
 if has("gui_runing") && has("win32")
-    map <F11> :call libcallnr("gvimfullscreen.dll", "ToggleFullScreen",0)<CR>
+    noremap <F11> :call libcallnr("gvimfullscreen.dll", "ToggleFullScreen",0)<CR>
 endif
 
  set guioptions-=T       " 隐藏工具栏 
@@ -105,6 +125,7 @@ set autoread            " 当文件被改动，自动加载
 set nobackup            " 从不备份 
 set noswapfile          " 禁止生成临时文件 
 set ruler               "突出显示状态栏标尺 
+set nolist
 set cc=80
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%y/%m/%d\ -\ %H:%M\")}
 set cursorline
@@ -125,33 +146,74 @@ source $VIMRUNTIME/menu.vim
 " 缩进 
 set autoindent
 set cindent
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set smarttab
 " 
 
 " 键盘映射 
+noremap <C-j> <C-W>j
+noremap <C-k> <C-W>k
+noremap <C-h> <C-W>h
+noremap <C-l> <C-W>l
+"nnoremap <space> viw
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+inoremap jk <esc>
+inoremap <esc> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+nnoremap <Left> <nop>
+nnoremap <Right> <nop>
+nnoremap <Up> <nop>
+nnoremap <Down> <nop>
+
+
+" 缩写, 加空格触发
+iabbrev Ji Ji-Yuhang
+iabbrev Ji-Yuhang- Ji-Yuhang
+iabbrev GM yuhang.silence@gmail.com
+iabbrev slef self
+" 标签设置
+noremap <S-Left> :tabp<CR>
+noremap <S-Right> :tabn<CR>
 if has("win32")
-    nmap <A-m> :TagbarToggle<CR>
-    nmap <A-o> :A<CR>
-    nmap <A-O> :NERDTreeToggle<CR>
-    nmap <A-d> :call Dict()<CR>
-    nmap <A-D> :call Shanbay()<CR>
+    nnoremap <A-m> :TagbarToggle<CR>
+    nnoremap <A-o> :A<CR>
+    nnoremap <A-O> :NERDTreeToggle<CR>
+    nnoremap <A-d> :call Dict()<CR>
+    nnoremap <A-D> :call Shanbay()<CR>
 endif
 if has("mac")
+    inoremap ˙ <Left>
+    inoremap ¬ <Right>
+    inoremap ∆ <Down>
+    inoremap ˚ <Up>
+ 
     nnoremap µ :TagbarToggle<CR>
     nnoremap Ø :NERDTreeToggle<CR>
-    nmap ∂ :call Dict()<CR>
-    nmap <A-D> :call Shanbay()<CR>
-    nmap Î :call Shanbay()<CR>
+    nnoremap ∂ :call Dict()<CR>
+    nnoremap <A-D> :call Shanbay()<CR>
+    nnoremap Î :call Shanbay()<CR>
+    nnoremap ç :call Collins()<CR>
+    nnoremap Ç :call Collins()<CR>
     
 else
-    nmap <A-m> :TagbarToggle<CR>
-    nmap <A-O> :NERDTreeToggle<CR>
-    nmap <A-d> :call Dict()<CR>
-    nmap <A-D> :call Shanbay()<CR>
+    inoremap <A-h> <Left>
+    inoremap <A-l> <Right>
+    inoremap <A-j> <Down>
+    inoremap <A-k> <Up>
+    nnoremap <A-m> :TagbarToggle<CR>
+    nnoremap <A-O> :NERDTreeToggle<CR>
+    nnoremap <A-d> :call Dict()<CR>
+    nnoremap <A-D> :call Shanbay()<CR>
+    nnoremap <A-C> :call Collins()<CR>
+    nnoremap <A-c> :call Collins()<CR>
 endif
 
 if has("unix")
@@ -197,3 +259,24 @@ endif
 "let g:clang_complete_copen=1
 "let g:clang_periodic_quickfix=1
 "let g:clang_snippets=1
+if has("mac")
+    let g:ctrlp_user_command = 'gfind %s -type f'
+    " Sane Ignore For ctrlp
+endif
+if exists("g:ctrlp_user_command")
+  unlet g:ctrlp_user_command
+endif
+set wildignore+=*\\vendor\\**
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*/.idea/*
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+set wildignore+=tags
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tags'
+"let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+      \ 'file': '\.exe$\|\.so$\|\.dat$',
+      \ 'link': 'some_bad_symbolic_links'
+      \ }
+
+let NERDTreeIgnore = ['tags$']
