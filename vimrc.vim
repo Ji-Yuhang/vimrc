@@ -8,8 +8,9 @@ set foldmethod=manual	" 手动折叠
 "set nofoldenable
 set background=dark		" 黑色背景 
 
-set nospell
 "set spell
+"setlocal spell spelllang=en
+set nospell
 function! Dict()
     let l:wincol=wincol()
     let l:winline=winline()
