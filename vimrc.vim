@@ -66,7 +66,6 @@ if has("win32")
     set guifont=Consolas:h11	" 设置字体 
     set guifont=Consolas:h11:cANSI
 endif
-colorscheme solarized		" 配色 
 let g:enable_bold_font=1
 
 "set noeb "出错时没有bi的报警声音
@@ -76,7 +75,6 @@ set vb "出错时候闪烁提示
 if has("gui_running")
     set background=light		" 黑色背景 
     "let g:solarized_termcolors=256
-    colorscheme solarized
     "colorscheme hybrid_material
     let g:rbpt_colorpairs = [
                 \ ['brown',       'RoyalBlue3'],
@@ -106,6 +104,7 @@ if has("gui_running")
     au Syntax * RainbowParenthesesLoadSquare
     au Syntax * RainbowParenthesesLoadBraces
 endif
+colorscheme solarized		" 配色 
 if has("unix")
     "set guifont=Consolas:h13	" 设置字体 
     set guifont=Microsoft_YaHei_Mono:h11
@@ -279,3 +278,4 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tags'
       \ }
 
 let NERDTreeIgnore = ['tags$']
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
