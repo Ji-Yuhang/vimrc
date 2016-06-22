@@ -161,16 +161,16 @@ noremap <C-l> <C-W>l
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
-inoremap jk <esc>
-inoremap <esc> <nop>
-inoremap <Left> <nop>
-inoremap <Right> <nop>
-inoremap <Up> <nop>
-inoremap <Down> <nop>
-nnoremap <Left> <nop>
-nnoremap <Right> <nop>
-nnoremap <Up> <nop>
-nnoremap <Down> <nop>
+"inoremap jk <esc>
+"inoremap <esc> <nop>
+"inoremap <Left> <nop>
+"inoremap <Right> <nop>
+"inoremap <Up> <nop>
+"inoremap <Down> <nop>
+"nnoremap <Left> <nop>
+"nnoremap <Right> <nop>
+"nnoremap <Up> <nop>
+"nnoremap <Down> <nop>
 
 
 " 缩写, 加空格触发
