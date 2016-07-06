@@ -178,6 +178,8 @@ iabbrev Ji Ji-Yuhang
 iabbrev Ji-Yuhang- Ji-Yuhang
 iabbrev GM yuhang.silence@gmail.com
 iabbrev slef self
+iabbrev <% <% %>
+
 " 标签设置
 noremap <S-Left> :tabp<CR>
 noremap <S-Right> :tabn<CR>
@@ -189,11 +191,13 @@ if has("win32")
     nnoremap <A-D> :call Shanbay()<CR>
 endif
 if has("mac")
+    inoremap ˘ <% %><esc>2hi
     inoremap ˙ <Left>
     inoremap ¬ <Right>
     inoremap ∆ <Down>
     inoremap ˚ <Up>
  
+    nnoremap ˘ i<% %><esc>2hi
     nnoremap µ :TagbarToggle<CR>
     nnoremap Ø :NERDTreeToggle<CR>
     nnoremap ∂ :call Dict()<CR>

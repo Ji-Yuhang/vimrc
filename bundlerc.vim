@@ -73,6 +73,7 @@ Plugin 'SuperTab'
 Plugin 'word_complete.vim'
 Plugin 'Ji-Yuhang/ctrlp-rails.vim'
 Plugin 'oplatek/Conque-Shell'
+Plugin 'peterhoeg/vim-qml'
 " Plugin 'STL-improved'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
