@@ -107,7 +107,7 @@ if has("gui_running")
 endif
 colorscheme solarized		" 配色 
 if has("unix")
-    "set guifont=Consolas:h13	" 设置字体 
+    "set guifont=Consolas\ 13	" 设置字体 
     set guifont=Microsoft_YaHei_Mono:h11
 endif
 if has("mac")
