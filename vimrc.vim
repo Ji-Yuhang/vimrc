@@ -104,8 +104,10 @@ if has("gui_running")
     au Syntax * RainbowParenthesesLoadRound
     au Syntax * RainbowParenthesesLoadSquare
     au Syntax * RainbowParenthesesLoadBraces
+    colorscheme solarized		" 配色 
+  else
+    colorscheme desert		" 配色 
 endif
-colorscheme solarized		" 配色 
 if has("unix")
     "set guifont=Consolas\ 13	" 设置字体 
     set guifont=Microsoft_YaHei_Mono:h11
@@ -119,7 +121,7 @@ if has("gui_runing") && has("win32")
 endif
 
  set guioptions-=T       " 隐藏工具栏 
- set guioptions-=m       " 隐藏菜单栏 
+set guioptions-=m       " 隐藏菜单栏 
 set autoread            " 当文件被改动，自动加载 
 set nobackup            " 从不备份 
 set noswapfile          " 禁止生成临时文件 
@@ -284,3 +286,22 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tags'
 
 let NERDTreeIgnore = ['tags$']
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> {Left-mapping} :TmuxNavigateLeft<cr>
+nnoremap <silent> {Down-Mapping} :TmuxNavigateDown<cr>
+nnoremap <silent> {Up-Mapping} :TmuxNavigateUp<cr>
+nnoremap <silent> {Right-Mapping} :TmuxNavigateRight<cr>
+nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
+let g:jsx_ext_required = 0
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ['eslint']
+let g:EclimCompletionMethod = 'omnifunc'
