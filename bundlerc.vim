@@ -40,7 +40,7 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'slim-template/vim-slim'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'ack.vim'
-Plugin 'snipMate'
+"Plugin 'snipMate'
 Plugin 'matchit.zip'
 Plugin 'Tagbar'
 Plugin 'L9'
@@ -87,12 +87,19 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'myhere/vim-nodejs-complete'
 Plugin 'rubycomplete.vim'
-
+Plugin 'leafgarland/typescript-vim'
+Plugin 'HerringtonDarkholme/yats.vim'
+Plugin 'Quramy/tsuquyomi'
+Plugin 'clausreinke/typescript-tools.vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 " Plugin 'STL-improved'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
+Plugin 'file:///home/jiyuhang/.vim/jiyuhang'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}

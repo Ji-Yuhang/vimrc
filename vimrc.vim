@@ -22,8 +22,7 @@ function! Dict()
         let l:com="ruby C:\\Users\\yuhang\\vimrc\\dict.rb ".l:abc
         call system(l:com)
         echo l:com
-    endif
-    if has("mac")
+    else
         let l:com="ruby ~/vimrc/shanbay.rb ".l:abc
         let l:shanbay=system(l:com)
         echo l:shanbay
@@ -37,8 +36,15 @@ function! Shanbay()
     let l:y=getwinposy()
     "echo l:x." ".l:y
     let l:abc=expand("<cword>")
-    let l:com="ruby C:\\Users\\Administrator\\vimrc\\shanbay.rb ".l:abc
+    if has("win32")
+      let l:com="ruby C:\\Users\\Administrator\\vimrc\\shanbay.rb ".l:abc
+    else
+      let l:com="ruby ~/vimrc/shanbay.rb ".l:abc
+    end
     if has("mac")
+        let l:com="ruby ~/vimrc/shanbay.rb ".l:abc
+    endif
+    if has("unix")
         let l:com="ruby ~/vimrc/shanbay.rb ".l:abc
     endif
     let l:shanbay=system(l:com)
@@ -51,9 +57,16 @@ function! Collins()
     let l:y=getwinposy()
     "echo l:x." ".l:y
     let l:abc=expand("<cword>")
-    let l:com="ruby C:\\Users\\Administrator\\vimrc\\shanbay.rb ".l:abc
+    if has("win32")
+      let l:com="ruby C:\\Users\\Administrator\\vimrc\\shanbay.rb ".l:abc
+    else
+      let l:com="ruby ~/vimrc/shanbay.rb ".l:abc
+    end
     if has("mac")
-        let l:com="ruby ~/vimrc/collins.rb ".l:abc
+        let l:com="ruby ~/vimrc/shanbay.rb ".l:abc
+    endif
+    if has("unix")
+        let l:com="ruby ~/vimrc/shanbay.rb ".l:abc
     endif
     let l:shanbay=system(l:com)
     echo l:shanbay
@@ -305,3 +318,8 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
 let g:EclimCompletionMethod = 'omnifunc'
+set wildmenu
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+set tags=./tags;,tags
