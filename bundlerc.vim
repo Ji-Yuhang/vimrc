@@ -19,7 +19,8 @@ Plugin 'gmarik/Vundle.vim'
 
 " # ruby
 "Plugin 'ruby.vimindentruby'
-Plugin 'indentruby.vim'
+"Plugin 'indentruby.vim'
+Plugin 'Ji-Yuhang/indentruby.vim'
 Plugin 'Ruby-Snippets'
 " # end
 
@@ -33,7 +34,7 @@ Plugin 'wincent/terminus'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
-"Plugin 'valloric/youcompleteme'
+Plugin 'valloric/youcompleteme'
 Plugin 'reedes/vim-litecorrect'
 Plugin 'reedes/vim-wordy'
 Plugin 'junegunn/goyo.vim'
@@ -55,7 +56,7 @@ Plugin 'ctrlp.vim'
 Plugin 'endwise.vim'
 "Plugin 'OmniCppComplete'
 Plugin 'JSON.vim'
-Plugin 'clang-complete'
+"Plugin 'clang-complete'
 Plugin 'Solarized'
 Plugin 'molokai'
 Plugin 'qmake--syntax.vim'
@@ -99,7 +100,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
-Plugin 'file:///home/jiyuhang/.vim/jiyuhang'
+"Plugin 'file:///home/jiyuhang/.vim/jiyuhang'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
