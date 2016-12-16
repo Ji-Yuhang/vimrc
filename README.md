@@ -27,6 +27,23 @@ source ~/vimrc/vimrc.vim
 ```
 - 打开vim 执行 `:PluginInstall`
 
+
+
+设置Ack默认参数
+```
+ln -s ~/vimrc/ackrc ~/.ackrc
+```
+
+从坚果云下载 shanbay.db 到此目录
+
+
+
+
+
+
+
+
+
 ### ctags
 
 ```

@@ -87,7 +87,8 @@ let g:enable_bold_font=1
 set vb "出错时候闪烁提示
  
 if has("gui_running")
-    set background=light		" 黑色背景 
+    "set background=light		" 黑色背景 
+    set background=dark		" 黑色背景 
     "let g:solarized_termcolors=256
     "colorscheme hybrid_material
     let g:rbpt_colorpairs = [
@@ -285,17 +286,17 @@ if exists("g:ctrlp_user_command")
   unlet g:ctrlp_user_command
 endif
 set wildignore+=*\\vendor\\**
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.log     " MacOSX/Linux
 set wildignore+=*/.idea/*
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 set wildignore+=tags
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tags'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tags|tmp|log|public'
 "let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
-      \ 'file': '\.exe$\|\.so$\|\.dat$',
-      \ 'link': 'some_bad_symbolic_links'
-      \ }
+      "\ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+      "\ 'file': '\.exe$\|\.so$\|\.dat$|webpack-bundle\.js$|\.log',
+      "\ 'link': 'some_bad_symbolic_links'
+      "\ }
 
 let NERDTreeIgnore = ['tags$']
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
