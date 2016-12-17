@@ -8,7 +8,7 @@ require 'json'
 
 module ShanbayDB
     ActiveRecord::Base.establish_connection :adapter => "sqlite3",
-        :database => "/Users/jiyuhang/vimrc/shanbay.db"
+        :database =>  File.join(ENV["HOME"],"vimrc/shanbay.db")
 
     class Words < ActiveRecord::Base
     end

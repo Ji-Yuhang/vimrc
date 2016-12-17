@@ -19,7 +19,8 @@ Plugin 'gmarik/Vundle.vim'
 
 " # ruby
 "Plugin 'ruby.vimindentruby'
-Plugin 'indentruby.vim'
+"Plugin 'indentruby.vim'
+Plugin 'Ji-Yuhang/indentruby.vim'
 Plugin 'Ruby-Snippets'
 " # end
 
@@ -40,7 +41,7 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'slim-template/vim-slim'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'ack.vim'
-Plugin 'snipMate'
+"Plugin 'snipMate'
 Plugin 'matchit.zip'
 Plugin 'Tagbar'
 Plugin 'L9'
@@ -74,12 +75,33 @@ Plugin 'word_complete.vim'
 Plugin 'Ji-Yuhang/ctrlp-rails.vim'
 Plugin 'oplatek/Conque-Shell'
 Plugin 'peterhoeg/vim-qml'
+
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'benmills/vimux'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'Yggdroot/indentLine'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'jaxbot/syntastic-react'
+Plugin 'mattn/emmet-vim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'myhere/vim-nodejs-complete'
+Plugin 'rubycomplete.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'HerringtonDarkholme/yats.vim'
+Plugin 'Quramy/tsuquyomi'
+Plugin 'clausreinke/typescript-tools.vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 " Plugin 'STL-improved'
 " Git plugin not hosted on GitHub
 Plugin 'skywind3000/asyncrun.vim'
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
+"Plugin 'file:///home/jiyuhang/.vim/jiyuhang'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
