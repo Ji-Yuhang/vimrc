@@ -97,6 +97,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 " Plugin 'STL-improved'
 " Git plugin not hosted on GitHub
+Plugin 'skywind3000/asyncrun.vim'
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'

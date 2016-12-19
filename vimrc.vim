@@ -8,6 +8,7 @@ set foldmethod=manual	" 手动折叠
 "set nofoldenable
 set background=dark		" 黑色背景 
 
+colorscheme desert
 "set spell
 "setlocal spell spelllang=en
 set nospell
@@ -131,6 +132,7 @@ if has("mac")
 endif
 
 if has("gui_runing") && has("win32")
+
     noremap <F11> :call libcallnr("gvimfullscreen.dll", "ToggleFullScreen",0)<CR>
 endif
 
@@ -304,6 +306,11 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tags|tmp|log|public'
 
 let NERDTreeIgnore = ['tags$']
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+"set dictionary+=/Users/jiyuhang/MyJianGuoYun/dict/webset_all_words.txt
+set dictionary+=/Users/jiyuhang/MyJianGuoYun/dict/macmillan_all_words.txt
+let g:ycm_auto_trigger = 1
+
+let g:ycm_min_num_of_chars_for_completion = 3
 let g:tmux_navigator_no_mappings = 1
 
 nnoremap <silent> {Left-mapping} :TmuxNavigateLeft<cr>
