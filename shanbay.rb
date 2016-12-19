@@ -76,11 +76,13 @@ end
 
 def main
     argu = ARGV[0]
-    word = argu.chomp
-    data = ShanbayDB::local_data word
-    #data = nil
-    data = ShanbayHttp::http_data word if data.nil?
-    parse_shanbay_data data
+    if argu && argu.chomp
+      word = argu.chomp
+      data = ShanbayDB::local_data word
+      #data = nil
+      data = ShanbayHttp::http_data word if data.nil?
+      parse_shanbay_data data
+    end
 end
 
 main
