@@ -5,6 +5,7 @@ require 'sqlite3'
 #require 'awesome_print'
 require 'socket'
 require 'json'
+require_relative "thesaurus"
 
 module ShanbayDB
     ActiveRecord::Base.establish_connection :adapter => "sqlite3",
@@ -18,6 +19,7 @@ module ShanbayDB
         if list.size > 0
             jsonstr = list.first.json
             data = JSON.parse(jsonstr)
+            data["thesaurus"] = Thesaurus.thesaurus(data["content"])
             return data
         else
             return nil

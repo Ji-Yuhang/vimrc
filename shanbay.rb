@@ -34,6 +34,7 @@ def parse_shanbay_data(data)
     endef = data["en_definition"]
     word = data["content"]
     pron = data["pron"]
+    thesaurus = data["thesaurus"]
     if ARGV[1] == "only_english"
       print  " [ " + pron + " ]"
       puts endef["defn"]
@@ -44,8 +45,11 @@ def parse_shanbay_data(data)
         print "\n"
       end
 
+
       puts cndef["defn"]
       puts endef["defn"]
+
+      puts_thesaurus thesaurus
     end
 
     audio = data["us_audio"]
@@ -56,6 +60,18 @@ def parse_shanbay_data(data)
     #    pid = fork { exec 'wget',audio,'-o',localmdeid }
     #    pid = fork{ exec 'afplay', localmdeid }
 
+end
+
+def puts_thesaurus(thesaurus)
+  return if thesaurus.nil?
+  thesaurus.each do | noun, list_list |
+    puts noun + ":"
+    list_list.each_with_index do |list,index|
+      puts "    #{index}. #{list.join(' -> ')}"
+      
+    end
+    
+  end
 end
 
 def main

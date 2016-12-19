@@ -36,7 +36,7 @@ ln -s ~/vimrc/vimrc ~/.vimrc
 ln -s ~/vimrc/gvimrc ~/.gvimrc
 ```
 
-从坚果云下载 shanbay.db 到此目录
+从坚果云下载 shanbay.db marshal_dump_verb.dump 到此目录
 
 
 
