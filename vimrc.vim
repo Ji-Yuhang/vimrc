@@ -87,8 +87,8 @@ let g:enable_bold_font=1
 set vb "出错时候闪烁提示
  
 if has("gui_running")
-    "set background=light		" 黑色背景 
-    set background=dark		" 黑色背景 
+    set background=light		" 黑色背景 
+    "set background=dark		" 黑色背景 
     "let g:solarized_termcolors=256
     "colorscheme hybrid_material
     let g:rbpt_colorpairs = [
@@ -161,9 +161,9 @@ source $VIMRUNTIME/menu.vim
 " 缩进 
 set autoindent
 set cindent
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 set smarttab
 " 
@@ -177,6 +177,10 @@ noremap <C-l> <C-W>l
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+nnoremap <leader>w :w<cr>
+vnoremap <leader>p "+p
+vnoremap <leader>y "+y
+nnoremap <leader>p "+p
 "inoremap jk <esc>
 "inoremap <esc> <nop>
 "inoremap <Left> <nop>
@@ -324,3 +328,16 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 set tags=./tags;,tags
+"let g:indentLine_char = '┋'
+
+if has("autocmd")
+  autocmd BufRead,BufNewFile *.rb*    :set shiftwidth=2 tabstop=2 softtabstop=2
+  autocmd BufRead,BufNewFile *.js*    :set shiftwidth=4 tabstop=4 softtabstop=4
+  autocmd BufRead,BufNewFile *.css*    :set shiftwidth=4 tabstop=4 softtabstop=4
+  autocmd BufRead,BufNewFile *.qml*    :set shiftwidth=4 tabstop=4 softtabstop=4
+"set tabstop=2
+"set softtabstop=2
+"set shiftwidth=2
+
+endif
+

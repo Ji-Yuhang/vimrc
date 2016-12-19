@@ -29,9 +29,11 @@ source ~/vimrc/vimrc.vim
 
 
 
-设置Ack默认参数
+设置 Ack vim gvim 默认参数
 ```
 ln -s ~/vimrc/ackrc ~/.ackrc
+ln -s ~/vimrc/vimrc ~/.vimrc
+ln -s ~/vimrc/gvimrc ~/.gvimrc
 ```
 
 从坚果云下载 shanbay.db 到此目录
