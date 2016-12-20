@@ -4,7 +4,8 @@ syntax on		    " 语法高亮
 set showcmd		    " 在Vim窗口的右下角显示一个完整的命令已经完成的部分 
 set laststatus=2	" 总是显示状态栏
 set foldenable		" 允许折叠 
-set foldmethod=manual	" 手动折叠
+set foldmethod=syntax	" 手动折叠
+set foldlevel=1
 "set nofoldenable
 set background=dark		" 黑色背景 
 

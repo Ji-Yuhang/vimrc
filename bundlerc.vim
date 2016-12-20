@@ -22,6 +22,8 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'indentruby.vim'
 Plugin 'Ji-Yuhang/indentruby.vim'
 Plugin 'Ruby-Snippets'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-rake'
 " # end
 
 
