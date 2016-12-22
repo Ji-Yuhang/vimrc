@@ -172,6 +172,7 @@ set smarttab
 " 
 
 " 键盘映射 
+noremap O ko
 noremap <C-j> <C-W>j
 noremap <C-k> <C-W>k
 noremap <C-h> <C-W>h

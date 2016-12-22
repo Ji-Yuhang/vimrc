@@ -10,6 +10,10 @@ class Thesaurus
     #puts @@thesaurus.include? word
     return @@thesaurus[word]
   end
+
+  def self.all_thesaurus
+    @@thesaurus
+  end
 end
 
 #puts Thesaurus.thesaurus(ARGV[0])
