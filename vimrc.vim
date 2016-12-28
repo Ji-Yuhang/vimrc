@@ -298,8 +298,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.log     " MacOSX/Linux
 set wildignore+=*/.idea/*
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 set wildignore+=tags
+set wildignore+=*/mobi/*
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tags|tmp|log|public'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tags|tmp|log|public|mobi'
 "let g:ctrlp_custom_ignore = {
       "\ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
       "\ 'file': '\.exe$\|\.so$\|\.dat$|webpack-bundle\.js$|\.log',
