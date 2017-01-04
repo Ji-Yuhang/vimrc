@@ -43,6 +43,7 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'slim-template/vim-slim'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'ack.vim'
+Plugin 'rking/ag.vim'
 "Plugin 'snipMate'
 Plugin 'matchit.zip'
 Plugin 'Tagbar'
