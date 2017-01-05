@@ -2,18 +2,23 @@
 require "open-uri"
 require "json"
 #require "iconv"
+require 'uri'
 require_relative "shanbay_local"
 
 module ShanbayHttp
     def http_data(word)
-        getwordui = "https://api.shanbay.com/bdc/search/?word=#{word}"
+      begin
+        getwordui = URI.escape("https://api.shanbay.com/bdc/search/?word=#{word}")
         open( getwordui) do |io|
             jsonstr =  io.read
             json = JSON.parse(jsonstr)
             data = json["data"]
             return data
         end
+      rescue
+      ensure
         return nil
+      end
     end
     def local_http_data(word)
         getwordui = "http://localhost/shanbayword/?word=#{word}"
