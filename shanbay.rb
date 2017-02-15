@@ -84,9 +84,11 @@ def main
     if argu && argu.chomp
       word = argu.chomp
       data = ShanbayDB::local_data word
+
+      return if word.scan(/[\w-]+/).empty?
       #data = nil
       data = ShanbayHttp::http_data word if data.nil?
-      parse_shanbay_data data
+      parse_shanbay_data data unless data.nil?
     end
 end
 
