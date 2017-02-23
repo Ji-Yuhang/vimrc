@@ -16,8 +16,8 @@ module ShanbayHttp
             return data
         end
       rescue
-      ensure
         return nil
+      ensure
       end
     end
     def local_http_data(word)
