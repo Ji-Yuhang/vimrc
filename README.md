@@ -47,6 +47,8 @@ ln -s ~/vimrc/gvimrc ~/.gvimrc
 
 
 ### ctags
+support ruby rspec
+https://github.com/majutsushi/tagbar/wiki#ruby
 
 ```
 ctags -R --c++-kinds=+px --fields=+iaS --extra=+q 

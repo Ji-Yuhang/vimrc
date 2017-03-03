@@ -78,9 +78,13 @@ endfunction
 
 
 
+"set guifont=Consolas\ 12	" 设置字体 
 if has("win32")
-    set guifont=Consolas:h11	" 设置字体 
-    set guifont=Consolas:h11:cANSI
+    set guifont=Consolas:h12	" 设置字体 
+    set guifont=Consolas:h12:cANSI
+endif
+set guifont=Menlo\ Regular:h14 
+if has("mac")
 endif
 let g:enable_bold_font=1
 
@@ -126,10 +130,10 @@ if has("gui_running")
 endif
 if has("unix")
     "set guifont=Consolas\ 13	" 设置字体 
-    set guifont=Microsoft_YaHei_Mono:h11
+    set guifont=Microsoft_YaHei_Mono:h14
 endif
 if has("mac")
-    set guifont=Monaco:h13
+    "set guifont=Monaco:h13
 endif
 
 if has("gui_runing") && has("win32")
@@ -359,3 +363,17 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+highlight clear ALEWarningSign
+set statusline+=%{ALEGetStatusLine()}
+let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
+let g:tagbar_type_ruby = {
+    \ 'kinds' : [
+        \ 'm:modules',
+        \ 'c:classes',
+        \ 'd:describes',
+        \ 'C:contexts',
+        \ 'f:methods',
+        \ 'F:singleton methods'
+    \ ]
+\ }

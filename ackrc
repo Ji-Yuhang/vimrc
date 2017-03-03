@@ -9,6 +9,7 @@
 --ignore-dir=doc
 --ignore-dir=tmp
 --ignore-dir=test
+--ignore-dir=coverage
 --ignore-dir=public
 --ignore-dir=public/assets
 --ignore-file=is:.tags
