@@ -36,7 +36,7 @@ Plugin 'wincent/terminus'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'valloric/youcompleteme'
+"Plugin 'valloric/youcompleteme'
 Plugin 'reedes/vim-litecorrect'
 Plugin 'reedes/vim-wordy'
 Plugin 'junegunn/goyo.vim'
@@ -87,7 +87,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'Yggdroot/indentLine'
 Plugin 'junegunn/vim-easy-align'
 "Plugin 'jaxbot/syntastic-react'
-Plugin 'w0rp/ale' "异步语法检查
+"Plugin 'w0rp/ale' "异步语法检查
 Plugin 'mattn/emmet-vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'thoughtbot/vim-rspec'
@@ -105,7 +105,9 @@ Plugin 'keith/rspec.vim'
 " Plugin 'STL-improved'
 " Git plugin not hosted on GitHub
 Plugin 'skywind3000/asyncrun.vim'
-Plugin 'git://git.wincent.com/command-t.git'
+"Plugin 'git://git.wincent.com/command-t.git'
+"Plugin 'wincent/command-t'
+
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
 "Plugin 'file:///home/jiyuhang/.vim/jiyuhang'

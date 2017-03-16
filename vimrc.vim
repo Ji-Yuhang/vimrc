@@ -5,7 +5,7 @@ set showcmd		    " 在Vim窗口的右下角显示一个完整的命令已经完�
 set laststatus=2	" 总是显示状态栏
 set foldenable		" 允许折叠 
 set foldmethod=syntax	" 手动折叠
-set foldlevel=1
+set foldlevel=2
 "set nofoldenable
 set background=dark		" 黑色背景 
 
@@ -306,7 +306,7 @@ set wildignore+=*/mobi/*
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tags|tmp|log|public|mobi'
 "let g:ctrlp_custom_ignore = {
-      "\ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+      "\ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|coverage\|tmp$',
       "\ 'file': '\.exe$\|\.so$\|\.dat$|webpack-bundle\.js$|\.log',
       "\ 'link': 'some_bad_symbolic_links'
       "\ }
@@ -377,3 +377,28 @@ let g:tagbar_type_ruby = {
         \ 'F:singleton methods'
     \ ]
 \ }
+
+"let g:tagbar_type_ruby = {
+    "\ 'kinds' : [
+        "\ 'm:module',
+        "\ 'c:classe',
+        "\ 'd:describe',
+        "\ 'C:context',
+        "\ 'f:method',
+        "\ 'F:singleton method'
+    "\ ]
+"\ }
+
+set noimdisable
+autocmd! InsertLeave * set imdisable|set iminsert=0
+autocmd! InsertEnter * set noimdisable|set iminsert=0
+let g:CommandTEncoding='utf-8'
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+" narrow the list down with a word under cursor
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+let g:ctrlp_funky_matchtype = 'path'
+let g:ctrlp_funky_syntax_highlight = 1
+
+nnoremap <C-r>fu :CtrlPFunky<Cr>
+" narrow the list down with a word under cursor
+nnoremap <C-R>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
