@@ -260,18 +260,18 @@ if has("unix")
 endif
 if has("mac")
     set path+=.
-    set path+=../bin/.moc
-    set path+=../bin/.qrc
-    set path+=../bin/.ui
-    set path+=./soap
+"    set path+=../bin/.moc
+    "set path+=../bin/.qrc
+    "set path+=../bin/.ui
+    "set path+=./soap
 
-    set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include
-    set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtCore
-    set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtGui
-    set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtWidgets
-    set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtNetwork
-    set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtXml
-    set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtSql
+    "set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include
+    "set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtCore
+    "set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtGui
+    "set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtWidgets
+    "set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtNetwork
+    "set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtXml
+    "set path+=/Users/jiyuhang/Qt5.4.0/5.4/clang_64/include/QtSql
 
     set path+=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1
     set path+=/usr/include
@@ -302,6 +302,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.log     " MacOSX/Linux
 set wildignore+=*/.idea/*
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 set wildignore+=tags
+set wildignore+=coverage
 set wildignore+=*/mobi/*
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tags|tmp|log|public|mobi'
@@ -339,8 +340,8 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:EclimCompletionMethod = 'omnifunc'
 set wildmenu
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<C-b>"
+let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 set tags=./tags;,tags
 "let g:indentLine_char = '┋'
 
@@ -355,14 +356,14 @@ if has("autocmd")
 
 endif
 " make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
+"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+"let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+"let g:UltiSnipsExpandTrigger = "<tab>"
+"let g:UltiSnipsJumpForwardTrigger = "<tab>"
+"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 highlight clear ALEWarningSign
 set statusline+=%{ALEGetStatusLine()}
@@ -392,7 +393,6 @@ let g:tagbar_type_ruby = {
 set noimdisable
 autocmd! InsertLeave * set imdisable|set iminsert=0
 autocmd! InsertEnter * set noimdisable|set iminsert=0
-let g:CommandTEncoding='utf-8'
 nnoremap <Leader>fu :CtrlPFunky<Cr>
 " narrow the list down with a word under cursor
 nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
@@ -402,3 +402,4 @@ let g:ctrlp_funky_syntax_highlight = 1
 nnoremap <C-r>fu :CtrlPFunky<Cr>
 " narrow the list down with a word under cursor
 nnoremap <C-R>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "jiyuhang_snip"]
