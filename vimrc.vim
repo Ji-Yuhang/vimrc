@@ -9,7 +9,8 @@ set foldlevel=2
 "set nofoldenable
 set background=dark		" 黑色背景 
 
-colorscheme desert
+"colorscheme molokai
+"colorscheme hybrid_material
 "set spell
 "setlocal spell spelllang=en
 set nospell
@@ -126,7 +127,9 @@ if has("gui_running")
     au Syntax * RainbowParenthesesLoadBraces
     colorscheme solarized		" 配色 
   else
-    colorscheme desert		" 配色 
+    "colorscheme desert		" 配色 
+    colorscheme solarized		" 配色 
+    "colorscheme molokai
 endif
 if has("unix")
     "set guifont=Consolas\ 13	" 设置字体 
@@ -344,12 +347,14 @@ let g:UltiSnipsJumpForwardTrigger="<C-b>"
 let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 set tags=./tags;,tags
 "let g:indentLine_char = '┋'
-
+let g:indentLine_enabled = 0
 if has("autocmd")
   autocmd BufRead,BufNewFile *.rb*    :set shiftwidth=2 tabstop=2 softtabstop=2
+  autocmd BufRead,BufNewFile *.rake*  :set shiftwidth=2 tabstop=2 softtabstop=2
   autocmd BufRead,BufNewFile *.js*    :set shiftwidth=4 tabstop=4 softtabstop=4
   autocmd BufRead,BufNewFile *.css*    :set shiftwidth=4 tabstop=4 softtabstop=4
   autocmd BufRead,BufNewFile *.qml*    :set shiftwidth=4 tabstop=4 softtabstop=4
+  autocmd BufRead,BufNewFile *.erb*    :set shiftwidth=4 tabstop=4 softtabstop=4
 "set tabstop=2
 "set softtabstop=2
 "set shiftwidth=2
