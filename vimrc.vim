@@ -10,7 +10,7 @@ set foldlevel=2
 set background=dark		" 黑色背景 
 
 "colorscheme molokai
-"colorscheme hybrid_material
+colorscheme hybrid_material
 "set spell
 "setlocal spell spelllang=en
 set nospell
@@ -94,7 +94,7 @@ let g:enable_bold_font=1
 set vb "出错时候闪烁提示
  
 if has("gui_running")
-    set background=light		" 黑色背景 
+    "set background=light		" 黑色背景 
     "set background=dark		" 黑色背景 
     "let g:solarized_termcolors=256
     "colorscheme hybrid_material
@@ -125,10 +125,12 @@ if has("gui_running")
     au Syntax * RainbowParenthesesLoadRound
     au Syntax * RainbowParenthesesLoadSquare
     au Syntax * RainbowParenthesesLoadBraces
-    colorscheme solarized		" 配色 
+    "colorscheme solarized		" 配色 
   else
+      "set background=light		" 黑色背景 
     "colorscheme desert		" 配色 
-    colorscheme solarized		" 配色 
+    "colorscheme solarized		" 配色 
+    colorscheme hybrid_material
     "colorscheme molokai
 endif
 if has("unix")
@@ -214,6 +216,10 @@ iabbrev <% <% %>
 " 标签设置
 noremap <S-Left> :tabp<CR>
 noremap <S-Right> :tabn<CR>
+
+noremap <A-Left> :tabp<CR>
+noremap <A-Right> :tabn<CR>
+
 if has("win32")
     nnoremap <A-m> :TagbarToggle<CR>
     nnoremap <A-o> :A<CR>
