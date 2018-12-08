@@ -35,6 +35,7 @@ module ShanbayHttp
 end
 
 def parse_shanbay_data(data)
+    # puts data
     cndef = data["cn_definition"]
     endef = data["en_definition"]
     word = data["content"]
@@ -44,22 +45,26 @@ def parse_shanbay_data(data)
       print  " [ " + pron + " ]"
       puts endef["defn"]
     else
-      printf word
-      if !pron.empty?
+      printf word if word
+      if pron && !pron.empty?
         print  "\t [ " + pron + " ]"
         print "\n"
       end
 
 
-      puts cndef["defn"]
-      puts endef["defn"]
+      puts cndef["defn"] if cndef
+      puts endef["defn"] if endef
 
       puts_thesaurus thesaurus
     end
 
     audio = data["us_audio"]
     #system "mplayer " + audio + " >/dev/null 2>&1"
-    exec("mplayer " + audio + " >/dev/null 2>1") if fork.nil?
+    if Gem.win_platform?
+      `mplayer #{audio}`
+    else
+      exec("mplayer " + audio + " >/dev/null 2>1") if fork.nil?
+    end
 
     #localmdeid = "/Users/jiyuhang/Documents/Anki/用户1/collection.media/#{word}.mp3"
     #    pid = fork { exec 'wget',audio,'-o',localmdeid }

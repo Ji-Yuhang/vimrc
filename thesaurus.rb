@@ -2,7 +2,12 @@
 
 class Thesaurus
   @@thesaurus_path = ENV["HOME"] + '/vimrc'+ '/marshal_dump_verb.dump'
-  @@thesaurus = Marshal.load File.read @@thesaurus_path
+  
+  begin
+    @@thesaurus = {}
+    @@thesaurus = Marshal.load File.read @@thesaurus_path
+  rescue
+  end
 
   def self.thesaurus(word)
     #puts word
