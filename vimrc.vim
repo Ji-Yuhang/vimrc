@@ -136,7 +136,10 @@ endif
 if has("unix")
     "set guifont=Consolas\ 13	" 设置字体 
     set guifont=Microsoft_YaHei_Mono:h14
+    set guifont=Ubuntu\ Mono\ 12
 endif
+
+set guifont=Ubuntu\ Mono\ 12
 if has("mac")
     "set guifont=Monaco:h13
 endif
@@ -147,7 +150,7 @@ if has("gui_runing") && has("win32")
 endif
 
 set guioptions-=T       " 隐藏工具栏 
-set guioptions-=m       " 隐藏菜单栏 
+"set guioptions-=m       " 隐藏菜单栏 
 set autoread            " 当文件被改动，自动加载 
 set nobackup            " 从不备份 
 set noswapfile          " 禁止生成临时文件 
