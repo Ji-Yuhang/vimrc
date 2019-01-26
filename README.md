@@ -54,3 +54,19 @@ https://github.com/majutsushi/tagbar/wiki#ruby
 ctags -R --c++-kinds=+px --fields=+iaS --extra=+q 
 ```
 
+# 常用脚本程序
+
+设置 ENV["memory_token"]
+add_word.rb 增加生词
+```
+add_word.rb bench
+```
+todos.rb 创建任务清单
+```
+todos new 今天要做...事情
+todos list
+```
+similarword.rb 模糊匹配单词
+```
+similarword.rb first second thrid words
+```
