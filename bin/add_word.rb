@@ -1,14 +1,14 @@
 #!/usr/bin/env ruby
-require 'RestClient'
+require 'rest_client'
 require 'awesome_print'
 require 'pry'
 require 'json'
 def token
-  ENV["iamyuhang_token"]
+  memory_token = ENV['memory_token']
 end
 
 def add_word(word)
-  url = "https://iamyuhang.com/api/v1/words/learning"
+  url = "https://memorysheep.com/api/v1/words/learning"
   params = {
     word: word,
     token: token
