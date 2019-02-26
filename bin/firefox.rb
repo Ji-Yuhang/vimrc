@@ -5,6 +5,7 @@ require 'watir-webdriver'
 require 'colorize'
 require 'nokogiri'
 require 'uri'
+require 'date'
 
 # Login Process ---
 puts ("Firefox Started...").yellow
@@ -25,6 +26,8 @@ get '/anki' do
   url = "https://memorysheep.com/baicizhans/anki?word=#{word}"
   uri = URI.encode(url)
   $browser.goto(uri)
+  file = Date.today.to_s + "-words.txt"
+  `echo #{word} >> #{file}` if word
   word
 end
 end
