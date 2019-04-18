@@ -11,10 +11,13 @@
 --ignore-dir=test
 --ignore-dir=coverage
 --ignore-dir=public
+--ignore-dir=.idea
+--ignore-dir=.git
 --ignore-dir=public/assets
 --ignore-file=is:.tags
 --ignore-file=is:.keep
 --ignore-file=is:Guardfile
+--ignore-file=match:-*.dump
 
 --color
 --follow
