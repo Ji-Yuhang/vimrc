@@ -16,6 +16,29 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+" # typescript
+Plugin 'peitalin/vim-jsx-typescript'
+
+Plugin 'othree/yajs.vim'
+Plugin 'othree/es.next.syntax.vim'
+Plugin 'isruslan/vim-es6'
+Plugin 'kern/vim-es7'
+"Plugin 'bentayloruk/vim-react-es6-snippets'
+Plugin 'dominikduda/vim_es7_javascript_react_snippets'
+Plugin 'hushicai/tagbar-javascript.vim'
+
+" # HTML 5
+Plugin 'othree/html5.vim'
+
+" # SASS 
+Plugin 'cakebaker/scss-syntax.vim'
+
+" # docker
+Plugin 'ekalinin/dockerfile.vim'
+
+" # editor config
+Plugin 'sgur/vim-editorconfig'
+
 
 " # ruby
 "Plugin 'ruby.vimindentruby'

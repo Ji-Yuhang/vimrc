@@ -9,7 +9,8 @@ require 'date'
 
 # Login Process ---
 puts ("Firefox Started...").yellow
-$browser = Watir::Browser.new :firefox
+#$browser = Watir::Browser.new :firefox
+$browser = Watir::Browser.new :chrome
 class App < Sinatra::Base
   set :bind, '0.0.0.0'
   set :environment, :production

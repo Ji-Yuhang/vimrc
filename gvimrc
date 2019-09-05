@@ -7,5 +7,7 @@ endif
 
 set guifont=Menlo\ Regular:h14 
 set guifont=Monaco:h14
-set guifont=Ubuntu\ Mono\ 14
+"set guifont=Ubuntu\ Mono\ 14
 let g:indentLine_color_gui = '#A4E57E'
+set background=light		" 白色 
+colorscheme solarized		" 配色 

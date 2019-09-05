@@ -84,8 +84,10 @@ if has("win32")
     set guifont=Consolas:h12	" 设置字体 
     set guifont=Consolas:h12:cANSI
 endif
-set guifont=Menlo\ Regular:h14 
 if has("mac")
+  if has("gui_running")
+    set guifont=Menlo\ Regular:h14 
+  endif
 endif
 let g:enable_bold_font=1
 
@@ -94,7 +96,7 @@ let g:enable_bold_font=1
 set vb "出错时候闪烁提示
  
 if has("gui_running")
-    "set background=light		" 黑色背景 
+    set background=light		" 黑色背景 
     "set background=dark		" 黑色背景 
     "let g:solarized_termcolors=256
     "colorscheme hybrid_material
@@ -133,13 +135,13 @@ if has("gui_running")
     colorscheme hybrid_material
     "colorscheme molokai
 endif
-if has("unix")
+if has("gui_runing") && has("unix")
     "set guifont=Consolas\ 13	" 设置字体 
     set guifont=Microsoft_YaHei_Mono:h14
     set guifont=Ubuntu\ Mono\ 12
 endif
 
-set guifont=Ubuntu\ Mono\ 12
+"set guifont=Ubuntu\ Mono\ 12
 if has("mac")
     "set guifont=Monaco:h13
 endif
@@ -148,6 +150,11 @@ if has("gui_runing") && has("win32")
 
     noremap <F11> :call libcallnr("gvimfullscreen.dll", "ToggleFullScreen",0)<CR>
 endif
+
+" 设置备份文件位置
+set backupdir=.backup/,~/.backup/,/tmp//
+set directory=.swp/,~/.swp/,/tmp//
+set undodir=.undo/,~/.undo/,/tmp//
 
 set guioptions-=T       " 隐藏工具栏 
 "set guioptions-=m       " 隐藏菜单栏 
@@ -176,9 +183,9 @@ source $VIMRUNTIME/menu.vim
 " 缩进 
 set autoindent
 set cindent
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set smarttab
 " 
@@ -312,12 +319,18 @@ endif
 set wildignore+=*\\vendor\\**
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.log     " MacOSX/Linux
 set wildignore+=*/.idea/*
+set wildignore+=*/.vscode/*
+set wildignore+=*/.git/*
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 set wildignore+=tags
 set wildignore+=coverage
 set wildignore+=*/mobi/*
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tags|tmp|log|public|mobi'
+set wildignore+=*/node_modules/*
+set wildignore+=*/dist/*
+set wildignore+=*/build/*
+set wildignore+=*/.temp/*
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|temp)$'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tags|tmp|log|public|mobi|temp'
 "let g:ctrlp_custom_ignore = {
       "\ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|coverage\|tmp$',
       "\ 'file': '\.exe$\|\.so$\|\.dat$|webpack-bundle\.js$|\.log',
@@ -327,7 +340,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tags|tmp|log|public|mob
 let NERDTreeIgnore = ['tags$']
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 "set dictionary+=/Users/jiyuhang/MyJianGuoYun/dict/webset_all_words.txt
-set dictionary+=/Users/jiyuhang/MyJianGuoYun/dict/macmillan_all_words.txt
+set dictionary+='~/vimrc/macmillan_all_words.txt'
 let g:ycm_auto_trigger = 1
 
 let g:ycm_min_num_of_chars_for_completion = 3
@@ -360,7 +373,7 @@ let g:indentLine_enabled = 0
 if has("autocmd")
   autocmd BufRead,BufNewFile *.rb*    :set shiftwidth=2 tabstop=2 softtabstop=2
   autocmd BufRead,BufNewFile *.rake*  :set shiftwidth=2 tabstop=2 softtabstop=2
-  autocmd BufRead,BufNewFile *.js*    :set shiftwidth=4 tabstop=4 softtabstop=4
+  autocmd BufRead,BufNewFile *.js*    :set shiftwidth=2 tabstop=2 softtabstop=2
   autocmd BufRead,BufNewFile *.css*    :set shiftwidth=4 tabstop=4 softtabstop=4
   autocmd BufRead,BufNewFile *.qml*    :set shiftwidth=4 tabstop=4 softtabstop=4
   autocmd BufRead,BufNewFile *.erb*    :set shiftwidth=4 tabstop=4 softtabstop=4
@@ -417,3 +430,8 @@ nnoremap <C-r>fu :CtrlPFunky<Cr>
 " narrow the list down with a word under cursor
 nnoremap <C-R>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "jiyuhang_snip"]
+
+" # editor config 
+let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
+
+

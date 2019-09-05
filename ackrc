@@ -4,7 +4,6 @@
 --ignore-dir=HelloWorld
 --ignore-dir=log
 --ignore-dir=public
---ignore-dir=node_modules
 --ignore-dir=client/node_modules
 --ignore-dir=doc
 --ignore-dir=tmp
