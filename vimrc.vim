@@ -10,7 +10,7 @@ set foldlevel=2
 set background=dark		" 黑色背景 
 
 "colorscheme molokai
-colorscheme hybrid_material
+colorscheme desert
 "set spell
 "setlocal spell spelllang=en
 set nospell
@@ -132,7 +132,7 @@ if has("gui_running")
       "set background=light		" 黑色背景 
     "colorscheme desert		" 配色 
     "colorscheme solarized		" 配色 
-    colorscheme hybrid_material
+    "colorscheme hybrid_material
     "colorscheme molokai
 endif
 if has("gui_runing") && has("unix")
@@ -433,5 +433,6 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "jiyuhang_snip"]
 
 " # editor config 
 let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 

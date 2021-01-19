@@ -7,10 +7,16 @@
 --ignore-dir=client/node_modules
 --ignore-dir=doc
 --ignore-dir=tmp
+--ignore-dir=dist
+--ignore-dir=.umi
+--ignore-dir=build
+--ignore-dir=node_modules
 --ignore-dir=test
+--ignore-dir=__tests__
 --ignore-dir=coverage
 --ignore-dir=public
 --ignore-dir=.idea
+--ignore-dir=.vscode
 --ignore-dir=.git
 --ignore-dir=public/assets
 --ignore-file=is:.tags
